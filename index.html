@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>나의 수행평가 결과</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; color: #172744; background: #f1f5fc; line-height: 1.7; }
+    main { width: min(1160px, 92%); margin: 36px auto; }
+    header { padding: 36px 28px; text-align: center; background: white; border: 1px solid #dce5f6; border-radius: 24px; }
+    .label { color: #345ec2; font-weight: 700; font-size: 15px; }
+    h1 { margin: 14px 0; font-size: clamp(28px, 5vw, 44px); line-height: 1.35; letter-spacing: -1.5px; }
+    h1 span { color: #345fd0; }
+    header p { color: #60708a; margin: 0; }
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 28px; }
+    .card { --accent: #315fca; --tint: #edf3ff; display: flex; flex-direction: column; background: white; border: 1px solid #dce5f6; border-top: 5px solid var(--accent); padding: 28px; border-radius: 18px; }
+    .card.green { --accent: #38743d; --tint: #edf7ee; }
+    .card.orange { --accent: #ad5800; --tint: #fff4e7; }
+    .number { color: var(--accent); font-size: 15px; font-weight: 800; letter-spacing: 2px; }
+    .icon { display: grid; place-items: center; align-self: flex-start; width: 64px; height: 64px; margin: 24px 0 12px; background: var(--tint); border-radius: 16px; font-size: 32px; }
+    h2 { margin: 6px 0 12px; font-size: 22px; letter-spacing: -0.8px; }
+    .card p { color: #60708a; margin: 0 0 18px; font-size: 15px; }
+    .details { font-size: 13px; color: #60708a; padding: 12px 0 24px; }
+    .button { display: block; margin-top: auto; text-align: center; background: var(--accent); color: white; border-radius: 10px; padding: 12px 16px; font-weight: 700; text-decoration: none; transition: opacity .15s, transform .15s; }
+    .button:hover { opacity: .9; transform: translateY(-2px); }
+    .button:focus-visible { outline: 3px solid #172744; outline-offset: 4px; }
+    footer { text-align: center; color: #60708a; font-size: 13px; margin-top: 28px; }
+    @media (max-width: 760px) { main { margin: 24px auto; } .cards { grid-template-columns: 1fr; } header { padding: 34px 20px; } .card { padding: 24px; } }
+  
+html,body{height:100%;overflow:hidden}body{height:100dvh;display:flex;flex-direction:column}main{width:min(1160px,94%);height:100%;min-height:0;margin:0 auto;padding:22px 0;display:flex;flex-direction:column;overflow:hidden}header{padding:24px;flex-shrink:0}h1{font-size:clamp(25px,4vw,40px);margin:9px 0}header p{font-size:14px}.cards{flex:1;min-height:0;overflow:auto;margin-top:20px}.card{min-height:0;padding:22px;overflow:auto}.icon{margin:14px 0 8px}.card p{font-size:14px}.details{padding:4px 0 15px}footer{flex-shrink:0;font-size:12px;margin:12px 0 0}.button{flex-shrink:0}
+@media(max-width:760px){main{padding:10px 0;width:94%}header{padding:12px 14px;border-radius:14px}.label{font-size:12px}h1{font-size:23px;line-height:1.3;margin:5px 0}header p{font-size:12px;line-height:1.5}header p br{display:none}.cards{grid-template-columns:1fr;grid-template-rows:repeat(3,minmax(0,1fr));gap:8px;margin-top:10px;overflow:hidden}.card{padding:10px 12px;border-radius:12px;display:grid;grid-template-columns:1fr auto;grid-template-rows:auto 1fr;gap:4px 12px;border-top-width:3px;overflow:auto}.number{display:none}.icon{display:none}.card h2{font-size:17px;line-height:1.4;margin:0;grid-column:1}.card p{grid-column:1;font-size:12px;line-height:1.5;margin:0}.card .details{display:none}.button{grid-column:2;grid-row:1/3;align-self:center;font-size:12px;padding:8px 10px;white-space:nowrap;margin:0}footer{font-size:10px;line-height:1.4;margin-top:8px}}
+@media(max-height:550px){header{padding:12px}h1{font-size:24px;margin:3px 0}header p{display:none}.cards{margin-top:10px;gap:8px}.card{padding:12px}.icon,.details{display:none}.card h2{font-size:18px}.card p{font-size:12px;margin-bottom:8px}.button{padding:7px}footer{margin-top:6px}}
+</style>
+</head>
+<body>
+  <main>
+    <header>
+      <div class="label">소프트웨어와 생활 · 수행평가</div>
+      <h1><span>웹으로 연결하는</span> 나의 성과</h1>
+      <p>블록을 조립하며 배우고, 실행 결과를 확인해 보세요.<br>프로그래밍 문제 풀이와 데이터 시각화 결과도 함께 확인할 수 있어요.</p>
+    </header>
+    <!-- web_puzzle.html과 PDF 2개를 index.html과 같은 폴더에 넣으세요.
+         실제 파일명이 다르면 각 링크의 href를 수정하세요. -->
+    <section class="cards" aria-label="수행평가 결과 문서">
+      <article class="card">
+        <span class="number">01 · WEB PROGRAMMING</span>
+        <div class="icon" aria-hidden="true">📝</div>
+        <h2>HTML 놀이터</h2>
+        <p>한두 개의 블록부터 시작해 HTML 페이지를 완성하고 별조각을 모아요. 입력 문구는 자유! 태그의 역할과 구조를 배우는 20개 미션입니다.</p>
+        <div class="details">태그 · 꾸미기 · 이벤트 · 조건 · 반복<br>20개 HTML 미션 · 자유로운 문구 · 별조각 모으기</div>
+        <a class="button" href="web_puzzle.html" aria-label="HTML 놀이터 학습 시작">게임 시작 →</a>
+      </article>
+      <article class="card green">
+        <span class="number">02 · PROGRAMMING</span>
+        <div class="icon" aria-hidden="true">💻</div>
+        <h2>프로그래밍 프로젝트</h2>
+        <p>선생님이 선정한 문제 10개를 코랩에서 해결한 코드와 실행 결과를 확인합니다.</p>
+        <div class="details">문제 10개 · 코드 · 실행 결과</div>
+        <a class="button" href="programming_project.pdf" target="_blank" rel="noopener noreferrer" aria-label="프로그래밍 프로젝트 PDF 열기 (새 탭)">문서 열기 ↗</a>
+      </article>
+      <article class="card orange">
+        <span class="number">03 · DATA VISUALIZATION</span>
+        <div class="icon" aria-hidden="true">📊</div>
+        <h2>데이터 시각화</h2>
+        <p>코랩에서 데이터를 분석하고 그래프로 시각화한 결과와 해석을 확인합니다.</p>
+        <div class="details">데이터 설명 · 분석 · 시각화 · 해석</div>
+        <a class="button" href="data_visualization.pdf" target="_blank" rel="noopener noreferrer" aria-label="데이터 시각화 PDF 열기 (새 탭)">문서 열기 ↗</a>
+      </article>
+    </section>
+    <footer>1번은 직접 풀어보는 학습 페이지입니다. 2번과 3번의 PDF 문서는 새 탭에서 열립니다.</footer>
+  </main>
+</body>
+</html>
